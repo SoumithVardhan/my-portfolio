@@ -203,4 +203,60 @@ a {
     --font-size-xxl: 20px;
     --font-size-xxxl: 32px;
   }
+  
+  .section-title {
+    font-size: var(--font-size-xxl);
+  }
+  
+  .section-desc {
+    font-size: var(--font-size-m);
+    padding: 0 10px;
+  }
+  
+  /* Ensure buttons don't overflow */
+  .primary-button,
+  .secondary-button {
+    padding: 10px 16px;
+    font-size: var(--font-size-s);
+    white-space: nowrap;
+  }
+  
+  /* Fix notification positioning */
+  .notification {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    font-size: var(--font-size-s);
+    padding: 10px 15px;
+  }
+}
+
+/* Landscape orientation fixes */
+@media (max-height: 500px) and (orientation: landscape) {
+  .home {
+    height: auto;
+    min-height: 100vh;
+    padding: 60px 20px 20px;
+  }
+  
+  .home-content-links {
+    position: relative;
+    bottom: auto;
+    margin-top: 20px;
+  }
+  
+  .navbar-content {
+    position: absolute;
+    top: 10px;
+  }
+}
+
+/* Very small screens (320px and below) */
+@media (max-width: 320px) {
+  .primary-button,
+  .secondary-button {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
 }

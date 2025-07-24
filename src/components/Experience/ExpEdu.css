@@ -196,3 +196,102 @@
       width: 95%;
     }
   }
+  
+  @media (max-width: 768px) {
+    .expedu-sections .tabs {
+      gap: 10px;
+    }
+    
+    .tab p {
+      font-size: var(--font-size-m);
+    }
+    
+    .experience,
+    .education {
+      padding: 20px;
+      gap: 25px;
+    }
+    
+    .experience-item,
+    .education-item {
+      margin-left: 60px;
+    }
+    
+    .company-logo,
+    .college-logo {
+      width: 40px;
+      height: 40px;
+      left: -55px;
+    }
+    
+    .vertical-line {
+      left: -35px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .expedu-sections .tabs {
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .expedu-sections .tab {
+      width: 80%;
+      padding: 8px;
+    }
+    
+    .experience,
+    .education {
+      padding: 15px;
+      gap: 20px;
+    }
+    
+    .experience-item,
+    .education-item {
+      margin-left: 50px;
+    }
+    
+    .company-logo,
+    .college-logo {
+      width: 35px;
+      height: 35px;
+      left: -45px;
+      top: 5px;
+    }
+    
+    .vertical-line {
+      left: -27px;
+      width: 1px;
+    }
+    
+    .experience-content > div,
+    .education-content > div {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+    
+    .experience-content span,
+    .education-content span {
+      order: -1;
+      margin-bottom: 2px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .experience-item,
+    .education-item {
+      margin-left: 40px;
+    }
+    
+    .company-logo,
+    .college-logo {
+      width: 30px;
+      height: 30px;
+      left: -35px;
+    }
+    
+    .vertical-line {
+      left: -20px;
+    }
+  }

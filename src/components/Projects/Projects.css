@@ -327,8 +327,14 @@
   
   @media (max-width: 480px) {
     .projects-content-items {
-      gap: 10px;
+      width: 98%;
+      gap: 15px;
     }
+    
+    .project-item {
+      padding: 15px;
+    }
+    
     .project-stacks {
       display: flex;
       flex-direction: column;
@@ -338,11 +344,46 @@
       padding: 10px 0;
       margin-top: 0px;
     }
-    .tech-stack {
-      padding: 5px 7px;
-      min-width: 75px;
+    
+    .stacks {
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
     }
+    
+    .tech-stack {
+      padding: 4px 8px;
+      min-width: 70px;
+      font-size: 10px;
+    }
+    
+    .project-btns {
+      gap: 8px;
+      margin-top: 8px;
+    }
+    
     .project-btns a {
-      padding: 10px;
+      padding: 8px;
+    }
+    
+    .code-icon,
+    .live-icon {
+      font-size: var(--font-size-xl);
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .project-title h3 {
+      font-size: var(--font-size-l);
+    }
+    
+    .tech-stack {
+      padding: 3px 6px;
+      min-width: 60px;
+      font-size: 9px;
+    }
+    
+    .project-btns a {
+      padding: 6px;
     }
   }

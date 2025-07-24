@@ -22,9 +22,9 @@ const Contact = () => {
       const userId = import.meta.env.VITE_APP_EMAILJS_USER_ID;
 
       const templateParams = {
-        name,
-        email,
-        message,
+        from_name: name,
+        from_email: email,
+        message: message,
       };
 
       emailjs
