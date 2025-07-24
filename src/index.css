@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  /* Blue Theme Colors - Fixed Values */
+  --background-color: hsl(0, 0%, 4%) !important;
+  --background-color-2: hsl(0, 0%, 10%) !important;
+  --text-color: hsl(0, 0%, 99%) !important;
+  --grey-color: hsl(0, 0%, 85%) !important;
+  --primary-color: hsl(210, 100%, 60%) !important;
+  --primary-color-light: hsl(210, 100%, 70%) !important;
+  --primary-color-dark: hsl(210, 100%, 45%) !important;
+  --primary-color-ultra-light: hsl(210, 100%, 85%) !important;
+  --secondary-color: hsl(0, 0%, 27%) !important;
+  --font-size-xs: 12px;
+  --font-size-s: 14px;
+  --font-size-m: 16px;
+  --font-size-l: 18px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 26px;
+  --font-size-xxxl: 48px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure proper contrast and visibility */
+html {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow-y: auto;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  scroll-behavior: smooth;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+/* Force Blue Theme Styles */
+.primary-button {
+  all: unset;
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 30px;
+  background-color: hsl(210, 100%, 60%) !important;
+  color: hsl(0, 0%, 4%) !important;
+  border: 1px solid hsl(210, 100%, 60%) !important;
+  transition: all 0.6s;
+  box-shadow: 0 4px 15px rgba(51, 153, 255, 0.2);
+  font-weight: 600;
+}
+.primary-button:hover {
+  background-color: hsl(210, 100%, 70%) !important;
+  border: 1px solid hsl(210, 100%, 70%) !important;
+  box-shadow: 0 8px 25px rgba(51, 153, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  all: unset;
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid hsl(210, 100%, 60%) !important;
+  color: hsl(0, 0%, 99%) !important;
+  transition: all 0.6s;
+  box-shadow: 0 2px 10px rgba(51, 153, 255, 0.1);
+  font-weight: 600;
+}
+.secondary-button:hover {
+  background-color: hsl(210, 100%, 60%) !important;
+  color: hsl(0, 0%, 4%) !important;
+  border: 1px solid hsl(210, 100%, 60%) !important;
+  box-shadow: 0 8px 25px rgba(51, 153, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.shimmer {
+  position: relative;
+  overflow: hidden;
+  background: #f0f0f0;
+  border-radius: 8px;
+}
+
+.shimmer::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(148, 147, 147, 0.1),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  animation: shimmer 4s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Accessibility Improvements */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary-color);
+  color: var(--background-color);
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  z-index: 9999;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Focus indicators */
+*:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --text-color: hsl(0, 0%, 100%);
+    --grey-color: hsl(0, 0%, 90%);
+    --background-color: hsl(0, 0%, 0%);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transform: none !important;
+  }
+}
+
+/* ------------------------------- */
+/*        Responsive Design        */
+/* ------------------------------- */
+
+@media (max-width: 1024px) {
+  :root {
+    --font-size-xs: 11px;
+    --font-size-s: 13px;
+    --font-size-m: 15px;
+    --font-size-l: 17px;
+    --font-size-xl: 19px;
+    --font-size-xxl: 24px;
+    --font-size-xxxl: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-xs: 10px;
+    --font-size-s: 12px;
+    --font-size-m: 14px;
+    --font-size-l: 16px;
+    --font-size-xl: 18px;
+    --font-size-xxl: 22px;
+    --font-size-xxxl: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-xs: 10px;
+    --font-size-s: 11px;
+    --font-size-m: 13px;
+    --font-size-l: 15px;
+    --font-size-xl: 17px;
+    --font-size-xxl: 20px;
+    --font-size-xxxl: 32px;
+  }
+}
