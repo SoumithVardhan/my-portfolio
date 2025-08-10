@@ -2,6 +2,10 @@
 
 🚀 **Modern, Accessible, and Performance-Optimized React Portfolio**
 
+## 🌐 Live Demo
+
+✅ **🔗 [View Live Portfolio](https://dancing-gumdrop-62263c.netlify.app/)**
+
 ## ✨ Features
 
 - **Advanced Animations**: GSAP, Framer Motion, and custom CSS animations
